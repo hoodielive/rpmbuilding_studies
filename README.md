@@ -1,6 +1,7 @@
 # Building RPM(s)
 
 I need to be better at building rpms. I'm going to use this repo as an endpoint to push my studies and exercises. Yayyy!
+# [source](https://rpm-packaging-guide.github.io) of notes and studies.
 
 ### Required packages for Centos 8 and Red Hat 8:
 ```bash
@@ -52,5 +53,11 @@ For software written in compiled languages go through a build process, producing
 
 For software written in raw interpreted languages, the source code is not built, but executed directly.
 
-For software written in byte-compiled interpreted languages, the source code is compiled into byte code, 
-which is then executed by the language virtual machine.
+For software written in byte-compiled interpreted languages, the source code is compiled into byte code, which is then executed by the language virtual machine.
+
+### Patching Software 
+- A patch is source code that updates other source code. 
+- Formatted as a diff, because it represents what is 'different' between two versions of text.
+- A diff is created using the 'diff' utility, which is then applied to the source code using the 'patch' utility.
+- In packaging, instead of simply modifying the original source code, we keep it and use patches on it (like version-control).
+
