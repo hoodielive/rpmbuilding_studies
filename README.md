@@ -34,7 +34,7 @@ patch < cello-output.patch
 A patch is source code that updates other source code. 
 make, is used to automate building.
 
-### How programs are made:
+### How programs are made
 1. The program is natively compiled.
 	 * The program is 'architecture' specific.
 	 * Compiles to machine code.
@@ -53,7 +53,7 @@ make, is used to automate building.
 4. The program is raw-interpreted.
 	 * It does NOT need to be compiled at all, they are directly executed by the interpreter.
 
-### Source Code Example:
+### Source Code Example
 ```c
 #include <stdio.h>
 
@@ -64,16 +64,27 @@ int main(void)
 }
 ```
 
-### Building Software from Source: 
+### Building Software from Source
 For software written in compiled languages go through a build process, producing machine code.
 
 For software written in raw interpreted languages, the source code is not built, but executed directly.
 
 For software written in byte-compiled interpreted languages, the source code is compiled into byte code, which is then executed by the language virtual machine.
 
-### Patching Software 
+### Patching Software
 - A patch is source code that updates other source code. 
 - Formatted as a diff, because it represents what is 'different' between two versions of text.
 - A diff is created using the 'diff' utility, which is then applied to the source code using the 'patch' utility.
 - In packaging, instead of simply modifying the original source code, we keep it and use patches on it (like version-control).
 
+### Installing Arbitrary Artifacts
+Linux/Unix systems support the FHS standard, a standard that determines which directory files should be placed in or where they should be located. Files installed from the RPM packages should be placed according to the FHS. Executables should be placed in $PATH according to this FHS.
+
+2 ways:
+1. Install
+2. The 'make' command
+
+### Install 
+```bash
+sudo install -m 0755 bello /usr/bin/bello
+```
