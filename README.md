@@ -18,6 +18,22 @@ rpmdev-setuptree, creates several working directories in ~/rpmbuild (permanently
 ### rpmbuild
 rpmbuild, creates the actual rpm package. The file will be found in: '~/rpmbuild/RPMS/x86_64'.
 
+### diff 
+diff, in the context of rpm development, we use it to generate patches: 
+```bash
+diff -Naur cello.c.org cello.c > cello-output.patch
+```
+
+### patch 
+A patch is source code that updates other source code. 
+```bash
+patch < cello-output.patch
+```
+
+### make 
+A patch is source code that updates other source code. 
+make, is used to automate building.
+
 ### How programs are made:
 1. The program is natively compiled.
 	 * The program is 'architecture' specific.
