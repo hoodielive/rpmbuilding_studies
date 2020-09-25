@@ -104,3 +104,11 @@ install:
 
 ### RPM { Packages }
 An RPM package is simply a file containing other files and information about them needed by the system.
+- cpio 
+- rpm header
+- metadata
+
+The rpm package manager uses metadata to determine:
+1. Dependencies.
+2. Where to install files.
+3. Information.
