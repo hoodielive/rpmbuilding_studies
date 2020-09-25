@@ -88,3 +88,17 @@ Linux/Unix systems support the FHS standard, a standard that determines which di
 ```bash
 sudo install -m 0755 bello /usr/bin/bello
 ```
+
+### Make
+```bash
+# Makefile
+cello:
+	gcc -g -o cello cello.c
+
+clean:
+  rm cello
+
+install:
+	mkdir -p $(DESTDIR)/usr/bin
+	install -m 0775 cello $(DESTDIR)/usr/bin/cello
+```
