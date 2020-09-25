@@ -30,3 +30,20 @@ yum install gcc \
 		patch \
 		rpmdevtools
 ```
+
+### rpmdev-setuptree
+rpmdev-setuptree, creates several working directories in ~/rpmbuild (permanently stored in $HOME).
+
+### rpmbuild
+rpmbuild, creates the actual rpm package. The file will be found in: '~/rpmbuild/RPMS/x86_64'.
+
+### Source Code Example:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	printf("Aeonic Sphere\n");
+	return 0;
+}
+```
