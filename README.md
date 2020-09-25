@@ -102,3 +102,6 @@ install:
 	mkdir -p $(DESTDIR)/usr/bin
 	install -m 0775 cello $(DESTDIR)/usr/bin/cello
 ```
+
+### RPM { Packages }
+An RPM package is simply a file containing other files and information about them needed by the system.
