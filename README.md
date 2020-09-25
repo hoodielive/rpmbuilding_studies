@@ -37,6 +37,25 @@ rpmdev-setuptree, creates several working directories in ~/rpmbuild (permanently
 ### rpmbuild
 rpmbuild, creates the actual rpm package. The file will be found in: '~/rpmbuild/RPMS/x86_64'.
 
+### How programs are made:
+1. The program is natively compiled.
+	 * The program is 'architecture' specific.
+	 * Compiles to machine code.
+	 * Can run as stand-alone.
+	 * rpmname.x86_64 as a hint.
+2. The program is interpreted by raw interpreting.
+	 * Does NOT compile to machine code.
+	 * Code is executed step-by-step with prior transformations 
+	 	 by a Language Interpreter or Virtual Machine.
+	 * Its Not 'architecture' -specific.
+	 * 'noarch' is the hint.
+	 * Interpreted languages are either byte-compiled or raw-interpreted.
+3. The program is interpreted by byte compiling. 
+   * Need to be compiled into byte code, which is then interpreted by a 
+	   language virtual machine.
+4. The program is raw-interpreted.
+	 * It does NOT need to be compiled at all, they are directly executed by the interpreter.
+
 ### Source Code Example:
 ```c
 #include <stdio.h>
@@ -47,3 +66,11 @@ int main(void)
 	return 0;
 }
 ```
+
+### Building Software from Source: 
+For software written in compiled languages go through a build process, producing machine code.
+
+For software written in raw interpreted languages, the source code is not built, but executed directly.
+
+For software written in byte-compiled interpreted languages, the source code is compiled into byte code, 
+which is then executed by the language virtual machine.
