@@ -1,0 +1,10 @@
+--- cello.c.orig	2020-09-24 21:50:59.891083709 -0400
++++ cello.c	2020-09-24 21:51:45.248962368 -0400
+@@ -2,6 +2,6 @@
+ 
+ int main(void)
+ {
+-	printf("Howdy, cello!\n");
++	printf("Howdy, cello! Here is a patch.\n");
+ 	return 0;
+ }
