@@ -89,9 +89,8 @@ Linux/Unix systems support the FHS standard, a standard that determines which di
 sudo install -m 0755 bello /usr/bin/bello
 ```
 
-### Make
+### Make { Makefile }
 ```bash
-# Makefile
 cello:
 	gcc -g -o cello cello.c
 
