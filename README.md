@@ -112,3 +112,25 @@ The rpm package manager uses metadata to determine:
 1. Dependencies.
 2. Where to install files.
 3. Information.
+
+### Setup a RPM build tree
+```bash
+rpmdev-setuptree
+```
+The created directories will be placed in $HOME->$USER.
+The created directories serve the following purposes:
+
+### Build 
+When packages are built, various %buildroot directories are created here. This is useful for investigating a failed build if the logs output do not provide enough information.
+
+### RPMS
+Binary RPMs are created here, in subdirectories for different architectures, for example in subdirectories *x86_64* and noarch.
+
+### SOURCES
+Here, the packager puts compressed source code archives and patches. The *rpmbuild* command looks for them here.
+
+### SPECS
+The packager puts SPEC files here.
+
+### sRPMS
+When *rpmbuild* is used to build an SRPM instead of a binary RPM, the resulting SRPM is created here.
