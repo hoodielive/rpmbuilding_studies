@@ -1,0 +1,11 @@
+gcc
+rpm-build
+rpm-devel
+rpmlint
+bash
+make
+python
+coreutils
+diffutils
+patch
+rpmdevtools
