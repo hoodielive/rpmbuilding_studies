@@ -16,7 +16,7 @@ dnf install gcc \
 		patch \
 		rpmdevtools
 ```
-### On Centos 7 and Red Hat 7:
+### Required packages for Centos 7 and Red Hat 7:
 ```bash
 yum install gcc \
 		rpm-build \
