@@ -1,7 +1,7 @@
 # Building RPM(s)
 
 I need to be better at building rpms. I'm going to use this repo as an endpoint to push my studies and exercises. Yayyy!
-# [source](https://rpm-packaging-guide.github.io) of notes and studies.
+[source](https://rpm-packaging-guide.github.io) of notes and studies.
 
 ### Required packages for Centos 8 and Red Hat 8:
 ```bash
