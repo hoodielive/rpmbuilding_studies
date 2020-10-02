@@ -18,20 +18,20 @@ rpmdev-setuptree, creates several working directories in ~/rpmbuild (permanently
 ### rpmbuild
 rpmbuild, creates the actual rpm package. The file will be found in: '~/rpmbuild/RPMS/x86_64'.
 
-### diff 
-diff, in the context of rpm development, we use it to generate patches: 
+### diff
+diff, in the context of rpm development, we use it to generate patches:
 ```bash
 diff -Naur cello.c.org cello.c > cello-output.patch
 ```
 
-### patch 
-A patch is source code that updates other source code. 
+### patch
+A patch is source code that updates other source code.
 ```bash
 patch < cello-output.patch
 ```
+A patch is source code that updates other source code.
 
-### make 
-A patch is source code that updates other source code. 
+### make
 make, is used to automate building.
 
 ### How programs are made
@@ -42,13 +42,13 @@ make, is used to automate building.
 	 * rpmname.x86_64 as a hint.
 2. The program is interpreted by raw interpreting.
 	 * Does NOT compile to machine code.
-	 * Code is executed step-by-step with prior transformations 
+	 * Code is executed step-by-step with prior transformations
 	 	 by a Language Interpreter or Virtual Machine.
 	 * Its Not 'architecture' -specific.
 	 * 'noarch' is the hint.
 	 * Interpreted languages are either byte-compiled or raw-interpreted.
-3. The program is interpreted by byte compiling. 
-   * Need to be compiled into byte code, which is then interpreted by a 
+3. The program is interpreted by byte compiling.
+   * Need to be compiled into byte code, which is then interpreted by a
 	   language virtual machine.
 4. The program is raw-interpreted.
 	 * It does NOT need to be compiled at all, they are directly executed by the interpreter.
@@ -72,7 +72,7 @@ For software written in raw interpreted languages, the source code is not built,
 For software written in byte-compiled interpreted languages, the source code is compiled into byte code, which is then executed by the language virtual machine.
 
 ### Patching Software
-- A patch is source code that updates other source code. 
+- A patch is source code that updates other source code.
 - Formatted as a diff, because it represents what is 'different' between two versions of text.
 - A diff is created using the 'diff' utility, which is then applied to the source code using the 'patch' utility.
 - In packaging, instead of simply modifying the original source code, we keep it and use patches on it (like version-control).
@@ -84,7 +84,7 @@ Linux/Unix systems support the FHS standard, a standard that determines which di
 1. Install
 2. The 'make' command
 
-### Install 
+### Install
 ```bash
 sudo install -m 0755 bello /usr/bin/bello
 ```
@@ -104,7 +104,7 @@ install:
 
 ### RPM { Packages }
 An RPM package is simply a file containing other files and information about them needed by the system.
-- cpio 
+- cpio
 - rpm header
 - metadata
 
@@ -120,7 +120,7 @@ rpmdev-setuptree
 The created directories will be placed in $HOME->$USER.
 The created directories serve the following purposes:
 
-### Build 
+### Build
 When packages are built, various %buildroot directories are created here. This is useful for investigating a failed build if the logs output do not provide enough information.
 
 ### RPMS
@@ -134,5 +134,3 @@ The packager puts SPEC files here.
 
 ### sRPMS
 When *rpmbuild* is used to build an SRPM instead of a binary RPM, the resulting SRPM is created here.
-
-
